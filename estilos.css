@@ -276,7 +276,6 @@ input {
     color: white;
 }
 
-/* Footer */
 footer {
     background-color: #f0f0f0;
     padding: 40px 20px;
@@ -292,6 +291,7 @@ footer {
 
 .footer-section {
     margin-bottom: 20px;
+    text-align: left; /* Alinhamento padrão para telas maiores */
 }
 
 footer h3 {
@@ -325,10 +325,30 @@ footer a {
     border-top: 1px solid #ddd;
 }
 
+/* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Centraliza as seções em telas menores */
+    }
+
+    .footer-section {
+        text-align: center; /* Centraliza o texto em telas menores */
+        width: 100%; /* Garante que as seções ocupem toda a largura */
+        margin-bottom: 30px; /* Aumenta a margem inferior para separar as seções */
+    }
+
+    footer h3 {
+        font-size: 1.1rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    footer li,
+    footer p {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    .social-icons a {
+        font-size: 1.3rem; /* Reduz o tamanho dos ícones para telas menores */
     }
 }
 /* Media Queries */

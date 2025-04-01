@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Parintinar</title>
+</head>
+
+<SCript>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector(".main-nav-container");
+    const header = document.querySelector("header");
+    const navOffset = nav.offsetTop; // Posição inicial do menu
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= navOffset - header.offsetHeight) {
+            nav.classList.add("fixed-nav");
+        } else {
+            nav.classList.remove("fixed-nav");
+        }
+    });
+});
+</SCript>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/jaguar.png" class="logo-img">
+            <h1>Parintinar</h1>
+            <button class="bnt-login">Entrar</button>
+        </div>
+    </header>
+    <main>
+        <div class="c-texto">
+            <h1>Onde é?</h1>
+        </div>
+        <div class="main-nav-container"> 
+            <nav>
+                <ul>
+                    <li>
+                        <img src="img/camera.png" class="i-cam">
+                        <a href="#">Lugares</a>
+                    </li>
+                    <li>
+                        <img src="img/cama.png" class="i-cama">
+                        <a href="#">Hoteis</a>
+                    </li>
+                    <li>
+                        <img src="img/comida.png" class="i-cama">
+                        <a href="#">Restaurantes</a>
+                    </li>
+                    <li>
+                        <img src="img/pilulas.png" class="i-cama">
+                        <a href="#">Farmácias</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="pesq">
+                <img src="img/lupa.png" class="i-lupa">
+                <input type="search" placeholder="Lugar, Hoteis...">
+                <button class="bnt-env">Buscar</button>
+            </div>
+        </div>
+        <div class="section-title">
+            <h1 class="txt-i">Talvez você curta</h1>
+        </div>
+    </main>
+
+    <section class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="img/bar.jpg" alt="Bar do Joel" class="card-img">
+            <div class="card-content">
+                <h3>Bar do Joel</h3>
+                <div class="rating">
+                    ★★★★☆ <span>4.2</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="img/cui.jpg" alt="cuiu restaurante" class="card-img">
+            <div class="card-content">
+                <h3>Restaurante do Kuiu</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Card 3 -->
+         <div class="card">
+            <img src="img/farmacia.jpg" alt="farmacia" class="card-img">
+            <div class="card-content">
+                <h3>Farmácia Parintins</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+            </div>
+
+             <!-- Card 4 -->
+         <div class="card">
+            <img src="img/bumbodromo.jpeg" alt="bumbodromo" class="card-img">
+            <div class="card-content">
+                <h3>Bumbódromo de Parintins</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+            </div>
+
+             <!-- Card 5 -->
+         <div class="card">
+            <img src="img/catedral.jpg" alt="catedral de Parintins" class="card-img">
+            <div class="card-content">
+                <h3>Catedral de Parintins</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+         <!-- Card 5 -->
+         <div class="card">
+            <img src="img/pracaprefeitura.jpg" alt="Praça Prefeitura" class="card-img">
+            <div class="card-content">
+                <h3>Praça da Prefeitura</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="img/amazon.jpg" alt="Amazon River" class="card-img">
+            <div class="card-content">
+                <h3>Amazon River Hotel</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+          <!-- Card 7 -->
+          <div class="card">
+            <img src="img/ica.jpg" alt="Icamiabas" class="card-img">
+            <div class="card-content">
+                <h3>Hotel Icamiabas</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+         <!-- Card 8 -->
+         <div class="card">
+            <img src="img/ilha.jpg" alt="Ilha Bela" class="card-img">
+            <div class="card-content">
+                <h3>Hotel Ilha Bela</h3>
+                <div class="rating">
+                    ★★★★★ <span>4.8</span>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-like">❤️ Curtir</button>
+                    <button class="btn-favorite">⭐ Favoritar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Parintins | Amazonas - Brasil.</p>
+                <p>Email: contato@parintinar.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Mapa do Site</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Parintinar. Todos os direitos reservados.</p>
+            <p>Desenvolvido com ❤️<i class="fas fa-star" style="color: blue;"></i> pelo amor da Maiara Andrade.</p>
+        </div>
+    </footer>
+</body>
+</html>

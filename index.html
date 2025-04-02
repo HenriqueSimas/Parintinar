@@ -1,69 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Parintinar</title>
+    <script src="scripts.js" defer></script>
 </head>
-
-<SCript>
-
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.querySelector(".main-nav-container");
-    const header = document.querySelector("header");
-    const navOffset = nav.offsetTop; // Posição inicial do menu
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY >= navOffset - header.offsetHeight) {
-            nav.classList.add("fixed-nav");
-        } else {
-            nav.classList.remove("fixed-nav");
-        }
-    });
-});
-</SCript>
-
 <body>
     <header>
         <div class="logo">
-            <img src="img/jaguar.png" class="logo-img">
-            <h1>Parintinar</h1>
+            <a href="index.html"><img src="img/jaguar.png" class="logo-img"></a>
+            <a href="index.html"><h1>Parintinar</h1></a> 
             <button class="bnt-login">Entrar</button>
         </div>
     </header>
+
     <main>
         <div class="c-texto">
             <h1>Onde é?</h1>
         </div>
+        
         <div class="main-nav-container"> 
             <nav>
                 <ul>
                     <li>
                         <img src="img/camera.png" class="i-cam">
-                        <a href="#">Lugares</a>
+                        <a href="#" class="nav-link" data-category="todos">Todos</a>
+                    </li>
+                    <li>
+                        <img src="img/camera.png" class="i-cam">
+                        <a href="#" class="nav-link" data-category="lugares">Lugares</a>
                     </li>
                     <li>
                         <img src="img/cama.png" class="i-cama">
-                        <a href="#">Hoteis</a>
+                        <a href="#" class="nav-link" data-category="hoteis">Hoteis</a>
                     </li>
                     <li>
                         <img src="img/comida.png" class="i-cama">
-                        <a href="#">Restaurantes</a>
+                        <a href="#" class="nav-link" data-category="restaurantes">Restaurantes</a>
                     </li>
                     <li>
                         <img src="img/pilulas.png" class="i-cama">
-                        <a href="#">Farmácias</a>
+                        <a href="#" class="nav-link" data-category="farmacias">Farmácias</a>
                     </li>
                 </ul>
             </nav>
+            
             <div class="pesq">
                 <img src="img/lupa.png" class="i-lupa">
-                <input type="search" placeholder="Lugar, Hoteis...">
+                <input type="search" id="search-input" placeholder="Lugar, Hoteis...">
                 <button class="bnt-env">Buscar</button>
             </div>
         </div>
+        
         <div class="section-title">
             <h1 class="txt-i">Talvez você curta</h1>
         </div>
@@ -71,28 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <section class="cards-container">
         <!-- Card 1 -->
-        <div class="card">
-            <img src="img/bar.jpg" alt="Bar do Joel" class="card-img">
+        <div class="card" data-category="restaurantes">
+            <img data-src="img/bar.jpg" alt="Bar do Joel" class="card-img lazy">
             <div class="card-content">
                 <h3>Bar do Joel</h3>
-                <div class="rating">
-                    ★★★★☆ <span>4.2</span>
-                </div>
+                <div class="rating" data-rating="4.2"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
         </div>
-    
+        
         <!-- Card 2 -->
-        <div class="card">
-            <img src="img/cui.jpg" alt="cuiu restaurante" class="card-img">
+        <div class="card" data-category="restaurantes">
+            <img data-src="img/cui.jpg" alt="cuiu restaurante" class="card-img lazy">
             <div class="card-content">
                 <h3>Restaurante do Kuiu</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
@@ -100,100 +87,90 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
 
-         <!-- Card 3 -->
-         <div class="card">
-            <img src="img/farmacia.jpg" alt="farmacia" class="card-img">
+        <!-- Card 3 -->
+        <div class="card" data-category="farmacias">
+            <img data-src="img/farmacia.jpg" alt="farmacia" class="card-img lazy">
             <div class="card-content">
                 <h3>Farmácia Parintins</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
-            </div>
+        </div>
 
-             <!-- Card 4 -->
-         <div class="card">
-            <img src="img/bumbodromo.jpeg" alt="bumbodromo" class="card-img">
+        <!-- Card 4 -->
+        <div class="card" data-category="lugares">
+            <img data-src="img/bumbodromo.jpeg" alt="bumbodromo" class="card-img lazy">
             <div class="card-content">
                 <h3>Bumbódromo de Parintins</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
-            </div>
+        </div>
 
-             <!-- Card 5 -->
-         <div class="card">
-            <img src="img/catedral.jpg" alt="catedral de Parintins" class="card-img">
+        <!-- Card 5 -->
+        <div class="card" data-category="lugares">
+            <img data-src="img/catedral.jpg" alt="catedral de Parintins" class="card-img lazy">
             <div class="card-content">
                 <h3>Catedral de Parintins</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
         </div>
-         <!-- Card 5 -->
-         <div class="card">
-            <img src="img/pracaprefeitura.jpg" alt="Praça Prefeitura" class="card-img">
+        
+        <!-- Card 6 -->
+        <div class="card" data-category="lugares">
+            <img data-src="img/pracaprefeitura.jpg" alt="Praça Prefeitura" class="card-img lazy">
             <div class="card-content">
                 <h3>Praça da Prefeitura</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
         </div>
-        <!-- Card 6 -->
-        <div class="card">
-            <img src="img/amazon.jpg" alt="Amazon River" class="card-img">
+        
+        <!-- Card 7 -->
+        <div class="card" data-category="hoteis">
+            <img data-src="img/amazon.jpg" alt="Amazon River" class="card-img lazy">
             <div class="card-content">
                 <h3>Amazon River Hotel</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
         </div>
-          <!-- Card 7 -->
-          <div class="card">
-            <img src="img/ica.jpg" alt="Icamiabas" class="card-img">
+        
+        <!-- Card 8 -->
+        <div class="card" data-category="hoteis">
+            <img data-src="img/ica.jpg" alt="Icamiabas" class="card-img lazy">
             <div class="card-content">
                 <h3>Hotel Icamiabas</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
                 </div>
             </div>
         </div>
-         <!-- Card 8 -->
-         <div class="card">
-            <img src="img/ilha.jpg" alt="Ilha Bela" class="card-img">
+        
+        <!-- Card 9 -->
+        <div class="card" data-category="hoteis">
+            <img data-src="img/ilha.jpg" alt="Ilha Bela" class="card-img lazy">
             <div class="card-content">
                 <h3>Hotel Ilha Bela</h3>
-                <div class="rating">
-                    ★★★★★ <span>4.8</span>
-                </div>
+                <div class="rating" data-rating="4.8"></div>
                 <div class="card-buttons">
                     <button class="btn-like">❤️ Curtir</button>
                     <button class="btn-favorite">⭐ Favoritar</button>
@@ -201,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
